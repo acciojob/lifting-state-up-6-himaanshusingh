@@ -8,15 +8,11 @@ const todoItems = [
 ];
 
 const App = () => {
-  const [todos, setTodos] = useState(todoItems);
+  const [todos, setTodos] = useState(() => todoItems);
 
   function handleComplete(id) {
-    setTodos((prev) =>
-      prev.map((todo) =>
-        todo.id === id ? { ...todo, isCompleted: true } : todo
-      )
-    );
-  }
+    setTodos((prev) => prev.map((todo) => todo.id === id ? { ...todo, isCompleted: true } : todo ));
+  } // prettier-ignore
 
   return (
     <div>
