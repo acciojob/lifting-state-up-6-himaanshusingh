@@ -12,7 +12,7 @@ const App = () => {
 
   function handleComplete(id) {
     setTodos((prev) => prev.map((todo) => todo.id === id ? { ...todo, isCompleted: true } : todo ));
-  } // prettier-ignore
+  }
 
   return (
     <div>
